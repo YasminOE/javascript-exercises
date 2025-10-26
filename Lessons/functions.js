@@ -32,3 +32,12 @@ function lastLetter(str){
     return str.charAt(str.length - 1);
 }
 console.log("Exercise lastLetter: " + lastLetter("abcd"));
+
+// Arrow functions
+const ask = (question, yes, no) => question ? yes() : no();
+
+const askTest = ask(
+  "Do you agree?",
+  () => console.log("You agreed."),
+  () => console.log("You canceled the execution.")
+);
